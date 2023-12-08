@@ -33,5 +33,6 @@ def get_answer_csv(file: TextIO, query: str) -> str:
 
     # Run the agent on the given query and return the answer
     #query = "whats the square root of the average age?"
+    query = f"{query}.\n You are a Robo Advisor. Answer questions related to Robo Advising including the provided context. If you dont know the answer say you dont know."
     answer = agent.run(query)
     return answer
